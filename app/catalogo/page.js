@@ -1,12 +1,12 @@
 "use client";
-import MainLayout from "../components/layouts/mainLayout"; // Importar MainLayout
+import MainLayout from "../components/layouts/mainLayout";
 import { productos } from "../mock/products";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
 export default function Catalogo() {
-  const categorias = [...new Set(productos.map((producto) => producto.category))]; // Categorías únicas
+  const categorias = [...new Set(productos.map((producto) => producto.category))];
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
 
   // Filtrar productos según la categoría seleccionada
@@ -60,7 +60,7 @@ export default function Catalogo() {
           {producto.title}
         </h2>
 
-        {/* Contenedor flex para alinear el precio y el botón */}
+
         <div className="flex justify-between items-center mt-auto">
           <p className="text-lg font-bold text-black">${producto.price}</p>
           <Link

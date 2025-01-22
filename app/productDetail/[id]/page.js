@@ -6,10 +6,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function ProductDetail() {
-  // Obtener el id de los parámetros de la URL
+  // Obtiene el id de los parámetros de la URL
   const { id } = useParams();
 
-  // Encontrar el producto por id
+  // Encuentra el producto por id
   const producto = productos.find((prod) => prod.id === parseInt(id));
 
   if (!producto) return <div>Producto no encontrado</div>;

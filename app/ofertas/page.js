@@ -30,7 +30,6 @@ export default function Ofertas() {
           {producto.title}
         </h2>
 
-        {/* Contenedor flex para alinear el precio y el botón */}
         <div className="flex justify-between items-center mt-auto">
           <p className="text-lg font-bold text-black">${producto.price}</p>
           <Link

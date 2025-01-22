@@ -5,7 +5,6 @@ const Navbar = () => {
   return (
     <header className="bg-white p-4 text-black bg-gradient-to-r from-amber-100 via-green-200 to-green-300">
       <nav className="flex justify-between ">
-        {/* <h1 className="font-bold">BOOKISH APP</h1> */}
         <Link href="/">
           <Image
             src="https://res.cloudinary.com/dq9qp6jqx/image/upload/c_crop,ar_16:9/v1726078406/BookishApp_lcnjqt.png"
