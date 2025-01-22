@@ -28,7 +28,7 @@ export default function Catalogo() {
                 categoria === categoriaSeleccionada
                   ? "bg-blue-500 text-white"
                   : "bg-gray-200 text-gray-800"
-              } hover:bg-blue-600 hover:text-white`}
+              } hover:bg-green-300  hover:text-white`}
               onClick={() =>
                 setCategoriaSeleccionada(
                   categoria === categoriaSeleccionada ? "" : categoria

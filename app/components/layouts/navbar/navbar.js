@@ -3,7 +3,7 @@ import Menu from "./menu";
 import Image from "next/image";
 const Navbar = () => {
   return (
-    <header className="bg-white p-4 text-black bg-gradient-to-r from-amber-100 via-green-200 to-green-300">
+    <header className="bg-white p-4 text-black bg-gradient-to-r from-amber-100 to-green-200">
       <nav className="flex justify-between ">
         <Link href="/">
           <Image
