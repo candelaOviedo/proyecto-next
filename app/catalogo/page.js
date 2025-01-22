@@ -41,32 +41,38 @@ export default function Catalogo() {
         </div>
 
         {/* Lista de productos */}
-        <div className="grid grid-cols-1  w-fit sm:grid-cols-2 md:grid-cols-3 gap-6 ">
-        {productosFiltrados.map((producto) => (
-            <div
-              key={producto.id}
-              className="border rounded-lg p-4 shadow-md bg-white"
-            >
-              <div className="mb-4">
-                <Image
-                  src={producto.image}
-                  alt={producto.title}
-                  width={300}
-                  height={400}
-                  className="object-cover"
-                />
-              </div>
-              <h2 className="text-xl font-bold mb-2 text-black text-center">{producto.title}</h2>
-              <p className="text-lg font-bold text-blue-600 text-end">${producto.price}</p>
-              <Link
-                href={`/productDetail/${producto.id}`}
-                className="text-blue-500 hover:text-blue-600 underline justify-end flex"
-              >
-                Ver más
-              </Link>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 w-fit sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {productosFiltrados.map((producto) => (
+      <div
+        key={producto.id}
+        className="border rounded-lg p-4 shadow-md bg-amber-50 flex flex-col"
+      >
+        <div className="mb-4 flex justify-center">
+          <Image
+            src={producto.image}
+            alt={producto.title}
+            width={300}
+            height={400}
+            className="object-cover rounded-md"
+          />
         </div>
+        <h2 className="text-xl font-bold mb-2 text-black drop-shadow-lg text-center">
+          {producto.title}
+        </h2>
+
+        {/* Contenedor flex para alinear el precio y el botón */}
+        <div className="flex justify-between items-center mt-auto">
+          <p className="text-lg font-bold text-black">${producto.price}</p>
+          <Link
+            href={`/productDetail/${producto.id}`}
+            className="text-black hover:text-white shadow-md hover:bg-green-300 transition duration-400 p-2 text-xl rounded-md bg-green-100"
+          >
+            Ver Detalle
+          </Link>
+        </div>
+      </div>
+    ))}
+  </div>
       </div>
     </MainLayout>
   );
