@@ -1,3 +1,5 @@
+"use client"
+
 import MenuList from './menuList';
 
 const Menu = () => {
